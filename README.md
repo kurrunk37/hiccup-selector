@@ -6,7 +6,13 @@ hiccup-selector
 ## 使用方法
 
 ```clojure
-(def doc [:html {} [:head {}] [:body {:class "bc"} [:div {:class "box" :id "content"} [:img {:src "test"}] [:img {:src "this"]] "bodycontent"]])
+(def doc [:html {}
+           [:head {}]
+           [:body {:class "bc"}
+             [:div {:class "box" :id "content"}
+               [:img {:src "test"}]
+               [:img {:src "this"]]
+               "bodycontent"]])
 
 (select doc [{:tag :body}])
 
